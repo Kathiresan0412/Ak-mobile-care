@@ -238,6 +238,33 @@ img {
     padding: 5px;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--primary);
+    transform: rotate(180deg);
+}
+
 .nav-toggle span {
     width: 25px;
     height: 2px;
@@ -1343,4 +1370,111 @@ a.contact-link:hover {
     .social-card {
         width: 100%;
     }
+}
+
+
+/* ===== LIGHT MODE ===== */
+body.light-mode {
+    --bg-dark: #f5f7fa;
+    --bg-darker: #ffffff;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    --gradient-bg: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 50%, #f5f7fa 100%);
+}
+
+body.light-mode .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .hero {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 50%, #f5f7fa 100%);
+}
+
+body.light-mode .hero::before {
+    background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(124, 58, 237, 0.08) 0%, transparent 50%);
+}
+
+body.light-mode .phone-body {
+    background: linear-gradient(145deg, #ffffff, #e8edf5);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.15),
+                0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .phone-screen {
+    background: linear-gradient(180deg, #1a1a2e, #0f0f1a);
+}
+
+body.light-mode .float-element {
+    color: rgba(0, 212, 255, 0.3);
+}
+
+body.light-mode .particle {
+    opacity: 0.15;
+}
+
+body.light-mode .services,
+body.light-mode .why-us,
+body.light-mode .contact {
+    background: linear-gradient(135deg, #edf2f7 0%, #f5f7fa 50%, #edf2f7 100%);
+}
+
+body.light-mode .footer {
+    background: #1a1a2e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --text-muted: #64748b;
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body.light-mode .footer .footer-logo span,
+body.light-mode .footer h4 {
+    color: #ffffff;
+}
+
+body.light-mode .footer p,
+body.light-mode .footer ul li,
+body.light-mode .footer ul li a {
+    color: #a0aec0;
+}
+
+body.light-mode .footer ul li a:hover {
+    color: var(--primary);
+}
+
+body.light-mode .nav-menu {
+    background: rgba(255, 255, 255, 0);
+}
+
+body.light-mode .service-card,
+body.light-mode .why-card,
+body.light-mode .contact-card,
+body.light-mode .stat-card,
+body.light-mode .social-card {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .back-to-top {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode #preloader {
+    background: #ffffff;
+}
+
+body.light-mode .map-container {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .section-tag {
+    background: rgba(0, 212, 255, 0.08);
 }
